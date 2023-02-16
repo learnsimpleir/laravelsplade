@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use ProtoneMedia\Splade\Facades\SEO;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::middleware('splade')->group(function () {
     Route::spladeUploads();
 
     Route::get('/', function () {
+        // SEO::title('Learnsimple Splade')
+        //       ->description('Become the Splade expert!')
+        //       ->keywords('laravel, splade, course');
+
         return view('welcome');
     });
 
